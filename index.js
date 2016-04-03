@@ -1,5 +1,5 @@
 module.exports = function(robot) {
-    robot.respond(/roll ([\w\+ ]+)$/, function(msg, done) {
+    robot.hear(/roll ([\w\+ ]+)$/, function(msg, done) {
         var die = msg.match[1];
 
         var breakdown = /(\d+)?d(\d+) *(\+\s*\d+)?/.exec(die);
